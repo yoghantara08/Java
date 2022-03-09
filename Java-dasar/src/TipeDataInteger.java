@@ -1,5 +1,4 @@
-public class Integer {
-
+public class TipeDataInteger {
     public static void main(String[] args) throws Exception {
         // integer
         byte iniByte = 100;
@@ -17,6 +16,16 @@ public class Integer {
         long balance = 1_000_000_000L;
         int sum = 60_000_000;
 
+
+        System.out.println(iniByte);
+        System.out.println(iniShort);
+        System.out.println(iniInteger);
+        System.out.println(iniLong);
+        System.out.println(iniLong2);
+        System.out.println(decimalInt);
+        System.out.println(hexaDecimal);
+        System.out.println(binaryDecimal);
+        System.out.println(balance);
+        System.out.println(sum);
     }
-    
 }

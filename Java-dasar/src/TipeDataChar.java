@@ -1,5 +1,4 @@
-public class Char {
-    
+public class TipeDataChar {
     public static void main(String[] args) {
         
         char g = 'G';
@@ -11,8 +10,4 @@ public class Char {
         System.out.println(s);
 
     }
-
 }
-
-
-    
