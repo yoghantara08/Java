@@ -1,5 +1,3 @@
-package Number;
-
 public class Float {
     public static void main(String[] args) {
         float iniFloat = 10.5F; // bisa tambahkan F dibelakang
