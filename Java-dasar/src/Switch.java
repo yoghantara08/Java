@@ -18,7 +18,7 @@ public class Switch {
                 break;
 
             }
-            
+
         // Switch Lambda
         var lulus = nilai;
         switch (lulus) {
@@ -29,5 +29,19 @@ public class Switch {
                 System.out.println("Salah Memasukkan Nilai");
             }
         }
+
+        // Yield
+        String ucapan;
+        ucapan = switch (lulus) {
+            case "A": 
+                yield "Anda Lulus";
+            case "B": 
+                yield "Anda Lulus";
+            case "C", "D": 
+                yield "Gagal";
+            default: 
+                yield "Salah Memasukkan Nilai";
+        };
+        System.out.println(ucapan);
     }
 }
