@@ -6,9 +6,11 @@ class Person {
     final String country = "Indonesia";
 
     // Constructor
-    Person(String paramName, String paramAddress){
-        name = paramName;
-        address = paramAddress;
+    // Kalau parameter namanya sama kyk field (Variable Shadowing) itu akan menutupi akses ke Field
+    // Pakai keyword this jika parameter dan nama field sama untuk mengakses ke field
+    Person(String name, String address){
+        this.name = name;
+        this.address = address;
     }
     // Constructor Overloading (Tipe parameter harus beda dan jumlah param berbeda)
     Person(){
@@ -22,8 +24,8 @@ class Person {
     }
 
     // Method
-    void sayHello(String paramName){
-        System.out.println("Hello " + paramName + ", Nama saya " + name);
+    void sayHello(String name){
+        System.out.println("Hello " + name + ", Nama saya " + this.name);
     }
     
 }
