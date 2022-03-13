@@ -1,4 +1,4 @@
-class Manager_Inheritence {
+class Manager_Inheritance {
     String name;
 
     void sayHello(String name){
@@ -8,6 +8,6 @@ class Manager_Inheritence {
 }
 
 // Bisa buat file berbeda
-class Pegawai extends Manager_Inheritence {
+class Pegawai extends Manager_Inheritance {
 
 }
