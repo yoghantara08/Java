@@ -1,7 +1,7 @@
 public class PersonApp {
     public static void main(String[] args) {
-        var person1 = new Person();
-        // Person person2 = new Person();
+        var person1 = new Person("Tes", "Foo");
+        Person person2 = new Person("Yoghantara", "Denpasar");
         // Person person3;
         // person3 = new Person();
 
@@ -16,6 +16,7 @@ public class PersonApp {
 
         // Method
         person1.sayHello("Budi");
+        person2.sayHello("Galang");
 
     }
     
