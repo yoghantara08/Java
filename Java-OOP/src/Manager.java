@@ -1,9 +1,5 @@
 class Manager extends Employee{
     String company;
-
-    void sayHello(String name){
-        System.out.println("Hi " + name + ", Saya Manager " + this.name);
-    }
     
     // Constructor 
     Manager(String name){
@@ -12,6 +8,11 @@ class Manager extends Employee{
     Manager(String name, String company){
         super(name);
         this.company = company;
+    }
+
+    @Override
+    void sayHello(String name){
+        System.out.println("Hi " + name + ", Saya Manager " + this.name);
     }
 }
 
@@ -24,6 +25,7 @@ class Pegawai extends Manager {
     }
 
     // Method Overriding
+    @Override
     void sayHello(String name){
         System.out.println("Hallo " + name + ", Saya Pegawai " + this.name);
     }
