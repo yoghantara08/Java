@@ -1,5 +1,4 @@
-class Manager_Inheritance {
-    String name;
+class Manager extends Employee{
     String company;
 
     void sayHello(String name){
@@ -7,17 +6,17 @@ class Manager_Inheritance {
     }
     
     // Constructor 
-    Manager_Inheritance(String name){
-        this.name = name;
+    Manager(String name){
+        super(name);
     }
-    Manager_Inheritance(String name, String company){
-        this.name = name;
+    Manager(String name, String company){
+        super(name);
         this.company = company;
     }
 }
 
-// Bisa buat file berbeda
-class Pegawai extends Manager_Inheritance {
+// Bisa buat di file yang berbeda
+class Pegawai extends Manager {
     // Class Child harus memanggil satu constructor (yg ada parameter)
     // Class child tidak perlu memanggil constructor jika di class parent mendeklarasikan default constructor
     Pegawai(String name) {
