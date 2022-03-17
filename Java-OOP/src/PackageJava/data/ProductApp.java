@@ -8,6 +8,9 @@ public class ProductApp {
         System.out.println(product);
 
         Product product2 = new Product("Laptop", 12_000_000);
+        // Equals
         System.out.println(product.equals(product2));
+        // hashCode
+        System.out.println(product.hashCode() == product2.hashCode());
     }
 }
