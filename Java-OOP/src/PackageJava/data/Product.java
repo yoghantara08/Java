@@ -21,4 +21,23 @@ public class Product {
     public String toString(){
         return "Product name: " + name + ", Price:" + price;
     }
+
+    public boolean equals(Object obj){
+        if(obj == this){
+            return true;
+        }
+        if (! (obj instanceof Product)){
+            return false;
+        }
+        Product product = (Product) obj;
+        if(this.price != product.price){
+            return false;
+        }
+
+        if(this.name != null){
+            return this.name.equals(product.name);
+        } else{
+            return product.name == null;
+        }
+    }
 }
