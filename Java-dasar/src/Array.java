@@ -115,9 +115,38 @@ public class Array {
         int angka = 3;
         int posisi = Arrays.binarySearch(arrayAngka8, angka);
         System.out.println("Angka ketemu di index ke: " + posisi);
+
+        // Membalikkan array
+        int[] arrAngka = {1,2,3,4,5};
+        balikArray(arrAngka);
+
+        // Tambah antar 2 array
+        int[] tambahArray1 = {1,5,4,7,3,5};
+        int[] tambahArray2 = {1,7,2,4,5,10};
+        sumTwoArray(tambahArray1, tambahArray2);
+        
     }
 
+    // Print array ke string, e.g int[] array = {1,2,3,4} => [1,2,3,4]
     private static void printArray(int[] dataArray) {
         System.out.println(Arrays.toString(dataArray));
+    }
+
+    // Method untuk membalikkan array
+    private static void balikArray(int[] array){
+        int[] newArray = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            newArray[i] = array[(array.length - (i + 1))];
+        }
+        System.out.println(Arrays.toString(newArray));
+    }
+
+    // Method tambah antar dua array
+    private static void sumTwoArray(int[] array1, int[] array2){
+        int[] newArray = new int[array1.length];
+        for(int i = 0; i < array1.length; i++){
+            newArray[i] = array1[i] + array2[i];
+        }
+        System.out.println(Arrays.toString(newArray));
     }
 }
