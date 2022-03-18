@@ -30,6 +30,9 @@ public class ValidationApp {
         //     System.out.println("Data null : " + n.getMessage());
         // }
 
+        LoginRequest loginRequest2 = new LoginRequest(null, null);
+        ValidationUtil.validateRuntime(loginRequest2);
+        
     }
 
 }
