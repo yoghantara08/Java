@@ -51,12 +51,15 @@ public class ByteStream {
         }
 
         // 3. Try with resources
-        try (FileInputStream fileInput2 = new FileInputStream("input4.txt")){
+        try (
+            FileInputStream in = new FileInputStream("input.txt");
+            FileOutputStream out = new FileOutputStream("output.txt")
+            ){
             // Membaca file
-            int data2 = fileInput2.read();
+            int data2 = in.read();
             while(data2 != -1){
-                System.out.print((char)data2);
-                data2 = fileInput2.read();
+                out.write((char)data2);
+                data2 = in.read();
             }
         }
 
