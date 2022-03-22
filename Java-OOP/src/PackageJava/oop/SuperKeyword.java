@@ -1,3 +1,5 @@
+package PackageJava.oop;
+
 class SuperKeyword {
     int getCorner(){
         return 0;
