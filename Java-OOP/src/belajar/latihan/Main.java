@@ -15,14 +15,37 @@ class Player {
         this.health = health;
     }
 
-    // method
+    // ATTACK
+    void attack(Player opponent){
+        double attackPower = this.weapon.attackPower;
+        
+        System.out.println(this.name + " attacking " + opponent.name + " with power " + attackPower);
+        opponent.defence(attackPower);
+    }
+
+    // DEFENCE
+    void defence(double attackPower){
+        double damage;
+        if(this.armor.defencePower < attackPower){
+            damage = attackPower - this.armor.defencePower;
+        } else {
+            damage = 0;
+        }
+
+        this.health -= damage;
+        System.out.println(this.name + " gets damage " + damage);
+    }
+
+    // EQUIPMENT
     void equipWeapon(Weapon weapon){
         this.weapon = weapon;
     }
+    
     void equipArmor(Armor armor){
         this.armor = armor;
     }
 
+    // DISPLAY
     void display(){
         System.out.println("\nName    : " + this.name);
         System.out.println("Health  : " + this.health + "hp");
@@ -79,8 +102,17 @@ public class Main {
         player1.equipWeapon(pedang);
         player1.equipArmor(bajuBesi);
         player1.display();
+
         player2.equipWeapon(batu);
         player2.equipArmor(kaos);
         player2.display();
+
+        // PERTEMPURAN
+        System.out.println("\nPERTEMPURAN");
+        player1.attack(player2);
+        System.out.println(player2.name + " Health : " + player2.health + "\n");
+
+        player2.attack(player1);
+        System.out.println(player1.name + " Health : " + player1.health + "\n");
     }
 }
