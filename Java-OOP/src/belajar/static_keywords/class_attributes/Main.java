@@ -29,13 +29,13 @@ public class Main {
         display2.show();
 
         // tampilkan static variable / class variable
-        System.out.println(display1.type);
+        // System.out.println(display1.type);
         System.out.println(Display.type);
 
         // memcoba mengganti variable static
         display1.setType("Ganti Static");
 
-        System.out.println(display1.type);
+        // System.out.println(display1.type);
         System.out.println(Display.type);
     }
 }
