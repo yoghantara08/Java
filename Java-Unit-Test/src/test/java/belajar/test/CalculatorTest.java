@@ -6,6 +6,7 @@ import org.opentest4j.TestAbortedException;
 import belajar.test.generator.SimpleDisplayNameGenerator;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -76,6 +77,11 @@ public class CalculatorTest {
     }
 
     // unit test untuk profile
+  }
+
+  @Test
+  public void testAssumptions() {
+    assumeTrue("TRUE".equals("TRUE"));
   }
 
 }
