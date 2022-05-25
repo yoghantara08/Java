@@ -1,6 +1,7 @@
 package belajar.test;
 
 import org.junit.jupiter.api.Test;
+import org.opentest4j.TestAbortedException;
 
 import belajar.test.generator.SimpleDisplayNameGenerator;
 
@@ -65,6 +66,16 @@ public class CalculatorTest {
   @Disabled
   public void testDisabled() {
     System.out.println("Disabled");
+  }
+
+  @Test
+  public void testAborted() {
+    var profile = System.getenv("PROFILE");
+    if (!"DEV".equals(profile)) {
+      throw new TestAbortedException("Test dibatalkan");
+    }
+
+    // unit test untuk profile
   }
 
 }
