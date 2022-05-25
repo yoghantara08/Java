@@ -6,6 +6,11 @@ import belajar.test.generator.SimpleDisplayNameGenerator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DisplayNameGeneration;
 
@@ -13,6 +18,26 @@ import org.junit.jupiter.api.DisplayNameGeneration;
 public class CalculatorTest {
 
   private Calculator calculator = new Calculator();
+
+  @BeforeAll
+  public static void beforeAll() {
+    System.out.println("Before All");
+  }
+
+  @AfterAll
+  public static void afterAll() {
+    System.out.println("After All");
+  }
+
+  @BeforeEach
+  public void beforeEach() {
+    System.out.println("Before each");
+  }
+
+  @AfterEach
+  public void afterEach() {
+    System.out.println("After each");
+  }
 
   @Test
   @DisplayName("Test sum success")
@@ -35,4 +60,11 @@ public class CalculatorTest {
       calculator.divide(100, 0);
     });
   }
+
+  @Test
+  @Disabled
+  public void testDisabled() {
+    System.out.println("Disabled");
+  }
+
 }
